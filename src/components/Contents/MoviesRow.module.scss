@@ -1,0 +1,178 @@
+.movie-container {
+    background-color: var(--color-background);
+    color: var(--color-white);
+    padding: 20px 20px 0px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    .movie-heading {
+        font-size: 18px;
+        user-select: none; // ko bôi đen được chữ
+    }
+    .btn-left {
+        position: absolute;
+        top: 50%;
+        left: 30px;
+        z-index: 20;
+        transform-origin: center;
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0.5);
+        height: 50px;
+        width: 40px;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        transform: translateY(-20%);
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        &:hover svg {
+            opacity: 1;
+            transform: scale(1.2);
+        }
+        svg {
+            opacity: 0.7;
+            font-size: 50px;
+            transition: all 0.3s linear;
+        }
+    }
+    .btn-left-net {
+        position: absolute;
+        top: 50%;
+        left: 30px;
+        z-index: 20;
+        transform-origin: center;
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0.5);
+        height: 100px;
+        width: max-content;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        transform: translateY(-20%);
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        &:hover svg {
+            opacity: 1;
+            transform: scale(1.2);
+        }
+        svg {
+            opacity: 0.7;
+            font-size: 50px;
+            transition: all 0.3s linear;
+        }
+    }
+    .btn-right {
+        position: absolute;
+        top: 50%;
+        right: 30px;
+        z-index: 20;
+        transform-origin: center;
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0.5);
+        height: 50px;
+        width: 40px;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        transform: translateY(-20%);
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        &:hover svg {
+            opacity: 1;
+            transform: scale(1.2);
+        }
+        svg {
+            opacity: 0.7;
+            font-size: 50px;
+            transition: all 0.3s linear;
+        }
+    }
+    .btn-right-net {
+        position: absolute;
+        top: 50%;
+        right: 30px;
+        z-index: 20;
+        transform-origin: center;
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0.5);
+        height: 100px;
+        width: max-content;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        transform: translateY(-20%);
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        &:hover svg {
+            opacity: 1;
+            transform: scale(1.2);
+        }
+        svg {
+            opacity: 0.7;
+            font-size: 50px;
+            transition: all 0.3s linear;
+        }
+    }
+    .movie-slider {
+        display: grid;
+        gap: 6px;
+        // grid-template-columns: repeat(11, 360px); //repeat(${movies.length},300px)
+        transition: all 0.3 linear;
+        user-select: none;
+        overflow-y: hidden;
+        overflow-x: auto;
+        overflow: hidden;
+        padding-top: 28px;
+        padding-bottom: 28px;
+        scroll-behavior: smooth;
+        // @media screen and (max-width:1200px) {
+        //     grid-template-columns: repeat(11, 300px); //repeat(${movies.length},300px)
+        // }
+        // @media screen and (max-width:992px) {
+        //     grid-template-columns: repeat(11, 250px); //repeat(${movies.length},300px)
+        // }
+        // @media screen and (max-width:200px) {
+        //     grid-template-columns: repeat(11, 200px); //repeat(${movies.length},300px)
+        // }
+        &:hover .movie-item {
+            opacity: 0.5;
+        }
+        .movie-item {
+            transform: scale(1);
+            max-width: 400px;
+            max-height: 500px;
+            width: 100%;
+            height: 100%;
+            transition: all 0.3s linear;
+            user-select: none;
+            overflow: hidden;
+            border-radius: 6px;
+            transform: center left;
+            position: relative;
+            &:hover {
+                opacity: 1;
+                transform: scale(1.1);
+                z-index: 10;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .movie-name {
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                padding: 4px;
+                text-align: center;
+                font-size: 14px;
+                background-color: rgba(0, 0, 0, 0.7);
+            }
+        }
+    }
+}
